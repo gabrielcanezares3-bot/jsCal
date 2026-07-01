@@ -1,5 +1,5 @@
 body {
-    background-color: #9dcffd;
+    background: linear-gradient(135deg, #9dcffd, #dceeff);
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
@@ -9,18 +9,25 @@ body {
 }
 
 .holder {
-    background-color: #ffffff;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0px 10px 30px rgba(29, 0, 190, 0.12);
+    border-radius: 24px;
+    box-shadow: 0px 20px 45px rgba(29, 0, 190, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.6);
     text-align: center;
+   
 }
+
+
 
 label {
     display: block;
     margin-bottom: 8px;
     color: #1f4d5a;
     font-weight: bold;
+    letter-spacing: 0.3px;
 }
 
 .inputbox {
@@ -34,29 +41,44 @@ input[type=text] {
     padding: 12px;
     margin-bottom: 15px;
     font-size: 15px;
+    background: rgba(255, 255, 255, 0.9);
+    transition: 0.25s ease;
+    outline: none;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    border-color: #4fa9ff;
+    box-shadow: 0 0 0 4px rgba(79, 169, 255, 0.18);
 }
 
 button {
     padding: 12px 24px;
     border-radius: 20px;
     border: none;
-    background-color: hwb(209 33% 0%);
+    background: linear-gradient(135deg, #4fa9ff, #2d82ff);
     color: white;
     font-weight: bold;
     margin: 5px;
     cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 20px rgba(45, 130, 255, 0.25);
 }
 
 .btn {
-    display:flex;
+    display: flex;
     justify-content: space-evenly;
-    margin-top:20px;
-
+    margin-top: 20px;
 }
 
-button:hover{
-    background-color: #cfe8f3;
-    color: hwb(209 33% 0%);
+button:hover {
+    background: #cfe8f3;
+    color: #2d82ff;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(45, 130, 255, 0.2);
     transition-duration: 0.3s;
-    
+}
+
+button:active {
+    transform: scale(0.97);
 }
